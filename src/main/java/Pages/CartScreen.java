@@ -25,5 +25,4 @@ public class CartScreen {
         WebElement button = wait.until(ExpectedConditions.elementToBeClickable(addToCartButton));
         button.click();
     }
-
 }
