@@ -24,18 +24,6 @@ public class Main {
         screen.clickAddToCart();
         driver.quit();
 
-
-
-
-
-        // CartScreen cartScreen = new CartScreen(driver);
-       // cartScreen.clickAddToCart();
-       // homePage.clickSecondProduct();
-       // cartScreen.clickAddToCart();
-
-
-
-
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
         // to see how IntelliJ IDEA suggests fixing it.
 

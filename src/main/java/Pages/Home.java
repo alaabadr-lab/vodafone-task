@@ -24,7 +24,6 @@ public class Home {
         WebElement button = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#home-button-2")));
         button.click();
     }
-   // By homeButton = By.cssSelector("#home-button-2");
 
     public void clickFirstProduct() {
         WebElement firstProduct = wait.until(ExpectedConditions.elementToBeClickable(
