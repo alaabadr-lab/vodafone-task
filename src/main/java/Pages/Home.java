@@ -27,33 +27,23 @@ public class Home {
     }
     public void closeCookiesBanner() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(25));
-        WebElement closeButton = wait.until(
-                ExpectedConditions.elementToBeClickable(
-                        By.cssSelector("button.onetrust-close-btn-handler[aria-label='Close']")
-                )
-        );
+        WebElement closeButton = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button.onetrust-close-btn-handler[aria-label='Close']")));
         closeButton.click();
     }
 
     public void clickMobilesCategory() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(25));
-        WebElement mobilesCategory = wait.until(
-                ExpectedConditions.elementToBeClickable(
-                        By.xpath("//a[@class='category-card' and @aria-label='Category: Mobiles']")
-                )
-        );
+        WebElement mobilesCategory = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@class='category-card' and @aria-label='Category: Mobiles']")));
         mobilesCategory.click();
     }
 
     public void searchProduct(String productName) {
-        WebElement searchBox = wait.until(ExpectedConditions.visibilityOfElementLocated(
-                By.xpath("//input[@id='searchInput']")));
+        WebElement searchBox = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='searchInput']")));
         searchBox.clear();
         searchBox.sendKeys(productName);
     }
     public void selectProductFromSearch(String productName) {
-        WebElement productItem = wait.until(ExpectedConditions.elementToBeClickable(
-                By.xpath("//p[text()='Infinix Hot 50i Bundle + Infinix XE23 True Wireless']")));
+        WebElement productItem = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//p[text()='Infinix Hot 50i Bundle + Infinix XE23 True Wireless']")));
         productItem.click();
     }
 

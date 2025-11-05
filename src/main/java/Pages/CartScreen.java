@@ -34,14 +34,11 @@ public class CartScreen {
     }
     public void clickCloseButton() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(25));
-        WebElement closeButton = wait.until(ExpectedConditions.presenceOfElementLocated(
-                By.cssSelector("div.close-btn")
-        ));
+        WebElement closeButton = wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("div.close-btn")));
     }
     public void addSearchProductToCart() {
         WebElement cartBtn = wait.until(ExpectedConditions.elementToBeClickable(
-                By.xpath("//p[contains(text(),'Infinix Hot 50i')]")
-        ));
+                By.xpath("//p[contains(text(),'Infinix Hot 50i')]")));
         cartBtn.click();
     }
 }
