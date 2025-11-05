@@ -12,17 +12,36 @@ public class CartScreen {
     WebDriverWait wait;
 
 
-    By addToCartButton = By.cssSelector("button.add-to-cart");
+    By addToCartButtonFirst = By.xpath("//button[@class='cart' and @aria-label='Add iPhone 15 to cart']");
+    By addToCartButtonSecond = By.xpath("//button[@class='cart' and @aria-label='Add Samsung Smart Phone A04 to cart']");
+
 
     public CartScreen(WebDriver driver) {
         this.driver = driver;
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(25));
 
     }
 
-    public void clickAddToCart() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        WebElement button = wait.until(ExpectedConditions.elementToBeClickable(addToCartButton));
+    public void clickAddToCartFirst() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(25));
+        WebElement button = wait.until(ExpectedConditions.elementToBeClickable(addToCartButtonFirst));
         button.click();
+    }
+    public void clickAddToCartSecond() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(25));
+        WebElement button = wait.until(ExpectedConditions.elementToBeClickable(addToCartButtonSecond));
+        button.click();
+    }
+    public void clickCloseButton() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(25));
+        WebElement closeButton = wait.until(ExpectedConditions.presenceOfElementLocated(
+                By.cssSelector("div.close-btn")
+        ));
+    }
+    public void addSearchProductToCart() {
+        WebElement cartBtn = wait.until(ExpectedConditions.elementToBeClickable(
+                By.xpath("//p[contains(text(),'Infinix Hot 50i')]")
+        ));
+        cartBtn.click();
     }
 }
