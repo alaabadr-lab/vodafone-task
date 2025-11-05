@@ -45,18 +45,6 @@ public class Home {
         mobilesCategory.click();
     }
 
-    //public void clickFirstProduct() {
-     //   WebElement firstProduct = wait.until(ExpectedConditions.elementToBeClickable(
-           //     By.xpath("//button[@class='cart' and @aria-label='Add iPhone 15 to cart']")));
-     //   firstProduct.click();
-//    }
-   // public void clickSecondProduct() {
-     //   WebElement secondProduct = wait.until(ExpectedConditions.elementToBeClickable(
-       //         By.xpath("//button[@class='cart' and contains(@aria-label,'Redmi 15 4G Smart Phone (8/256)')]")
-       // ));
-    //    secondProduct.click();
-
- //   }
     public void searchProduct(String productName) {
         WebElement searchBox = wait.until(ExpectedConditions.visibilityOfElementLocated(
                 By.xpath("//input[@id='searchInput']")));

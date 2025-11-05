@@ -42,9 +42,6 @@ public class Main {
         screen.clickCloseButton();
 
 
-
-
-
         // driver.quit();
 
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
